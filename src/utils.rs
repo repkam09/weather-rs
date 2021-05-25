@@ -7,6 +7,6 @@ pub fn get_api<T: de::DeserializeOwned>(url: &str) -> Result<T, Box<dyn std::err
         Err(e) => return Err(Box::from(e)),
     };
 
-    let json: T = serde_json::from_str(&resp).expect("Cannot Decode JSON Data!");
+    let json: T = serde_json::from_str(&resp).expect("Unable to decode JSON response");
     Ok(json)
 }
