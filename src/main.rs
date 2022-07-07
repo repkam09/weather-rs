@@ -16,5 +16,5 @@ fn main() {
     let string_weather = format!("{:.1}°", fehrenheit);
 
     // Display the system tray with the weather
-    tray::weather_tray(string_weather);
+    let _tray = tray::weather_tray(string_weather);
 }
